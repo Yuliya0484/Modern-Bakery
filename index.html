@@ -36,7 +36,9 @@
               </li>
             </ul>
           </nav>
-          <button class="button" type="button">Замовити дзвінок</button>
+          <button class="button button-open" type="button">
+            Замовити дзвінок
+          </button>
         </div>
       </div>
     </header>
@@ -88,7 +90,7 @@
       <section id="chefs" class="chefs-section section">
         <div class="container">
           <h2 class="chefs-title section-title centered">
-            Наші найкращі шеф-кухарі
+            Наші найкращі <br /><span class="accent-span">шеф-кухарі</span>
           </h2>
           <ul class="chefs-list">
             <li class="chefs-item">
@@ -194,7 +196,48 @@
               <h2 class="contacts-title section-title">
                 Приєднуйся до мережі пекарень
               </h2>
-              <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+              <p class="contact-text">
+                Заповни форму, щоб ми звʼязались з тобою!
+              </p>
+              <form name="contact-form" autocomplete="off">
+                <div class="form-field">
+                  <input
+                    class="input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                  />
+                  <label class="label" for="user-name">Ім’я</label>
+                </div>
+                <div class="form-field">
+                  <input
+                    class="input"
+                    type="tel"
+                    id="user-tel"
+                    name="user-tel"
+                  />
+                  <label class="label" for="user-tel">Телефон</label>
+                </div>
+                <div class="form-field">
+                  <input
+                    class="input"
+                    type="email"
+                    id="user-email"
+                    name="user-email"
+                  />
+                  <label class="label" for="user-email">Електронна пошта</label>
+                </div>
+                <button class="button modal-call-btn" type="submit">
+                  Замовити дзвінок
+                </button>
+                <p class="form-terms">
+                  Натискаючи на кнопку я погоджуюсь<a
+                    class="form-terns-link"
+                    href="#"
+                    >з політикою конфіденційності</a
+                  >
+                </p>
+              </form>
             </div>
             <iframe
               class="contact-map"
@@ -278,5 +321,42 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="button-close" type="button">Зачинити</button>
+        <h2 class="form-title">Замовити дзвінок</h2>
+        <p class="form-text">
+          Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
+        </p>
+        <form name="modal-form" autocomplete="off" novalidate>
+          <div class="form-field">
+            <input class="input" type="text" id="user-name" name="user-name" />
+            <label class="label" for="user-name">Ім’я</label>
+          </div>
+          <div class="form-field">
+            <input class="input" type="tel" id="user-tel" name="user-tel" />
+            <label class="label" for="user-tel">Телефон</label>
+          </div>
+          <div class="form-field">
+            <input
+              class="input"
+              type="email"
+              id="user-email"
+              name="user-email"
+            />
+            <label class="label" for="user-email">Електронна пошта</label>
+          </div>
+          <button class="button modal-call-btn" type="submit">
+            Замовити дзвінок
+          </button>
+          <p class="form-terms">
+            Натискаючи на кнопку я погоджуюсь<a class="form-terns-link" href="#"
+              >з політикою конфіденційності</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
