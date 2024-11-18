@@ -94,7 +94,7 @@ ul {
   padding: 0 24px;
 }
 /* ----Header---- */
-header {
+.header {
   position: absolute;
   width: 100%;
   top: 0;
@@ -283,13 +283,26 @@ header {
   );
   border-radius: 16px;
   transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .format-card:hover {
   transform: scale(1.05);
 }
+.format-image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
 .format-title {
   font-weight: 600;
   font-size: 24px;
+  color: var(--color-primary-light);
 }
 .format-text {
   font-weight: 300;
