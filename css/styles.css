@@ -140,6 +140,21 @@ ul {
 .link:hover {
   color: var(--color-brand);
 }
+.burger-button {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .header-menu,
+  .header-button {
+    display: none;
+  }
+  .burger-button {
+    display: block;
+    border: none;
+    background-color: transparent;
+    fill: var(--color-primary-light);
+  }
+}
 /* ----Hero---- */
 .hero-section {
   padding: 272px 0;
@@ -170,10 +185,29 @@ ul {
 .hero-title .accent {
   color: var(--color-brand);
 }
+.button-container {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .hero-title {
+    font-size: 67px;
+    line-height: 0.98507;
+    margin-bottom: 48px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-button {
+    display: inline-block;
+    align-items: center;
+  }
+}
 
 /* ----Advantages--- */
 .advantages-section {
-  background: var(--color-brand);
+  background-color: var(--color-brand);
   backdrop-filter: blur(4px);
   padding: 16px 0;
 }
@@ -186,6 +220,22 @@ ul {
   font-weight: 300;
   font-size: 20px;
   color: var(--color-primary-light);
+}
+@media screen and (max-width: 1200px) {
+  .advantages-section {
+    background-color: var(--color-brand-light);
+    margin: 40px 21px 0 21px;
+    border-radius: 24px;
+    display: flex;
+    text-align: center;
+  }
+  .advantages-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .advantages-item {
+    font-size: 14px;
+  }
 }
 /* ----Traditions---- */
 .traditions-section {
@@ -213,6 +263,15 @@ ul {
 }
 .bakerman-image {
   border-radius: 400px 400px 0 0;
+}
+@media screen and (max-width: 1200px) {
+  .bakerman-image {
+    display: none;
+  }
+  .traditions-title {
+    font-weight: 900;
+    font-size: 32px;
+  }
 }
 /* ----Chef-section---- */
 .chefs-title {
@@ -254,6 +313,26 @@ ul {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light),
     -16px 16px 0 2px var(--color-input-shadow);
+}
+@media screen and (max-width: 1200px) {
+  .chefs-title {
+    margin: 0 0 24px 0;
+    font-size: 32px;
+  }
+  .chefs-title::before,
+  .chefs-title::after {
+    display: none;
+  }
+  .chefs-list {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .chef-card {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 }
 /* ----Formats */
 .formats-title {
